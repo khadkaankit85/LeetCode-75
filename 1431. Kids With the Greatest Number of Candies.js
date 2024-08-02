@@ -18,6 +18,7 @@ Explanation: If you give all extraCandies to:
 
  */
 
+
 function getLargestCandyCount(candies) {
     let largestNumOfCandies = -1
     for (const candy in candies) {
@@ -28,7 +29,7 @@ function getLargestCandyCount(candies) {
     }
     return (largestNumOfCandies)
 }
-function checkTheAns(candies, extraCandies) {
+var kidsWithCandies = function checkTheAns(candies, extraCandies) {
     let largestCount = getLargestCandyCount(candies)
     let reqAns = candies.map((candies, index) => {
         if (candies + extraCandies >= largestCount) {
@@ -36,6 +37,6 @@ function checkTheAns(candies, extraCandies) {
         }
         return false
     })
-    console.log(reqAns)
+    return reqAns
 }
 checkTheAns([2, 3, 5, 1, 3], 3)
