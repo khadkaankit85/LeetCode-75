@@ -30,7 +30,7 @@ var reverseWords = function (s) {
             ])
         }
     }
-    return reversedS
+    return reversedS.join(" ")
 
 };
 console.log(reverseWords("the sky is blue"))
