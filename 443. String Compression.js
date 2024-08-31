@@ -18,5 +18,22 @@ Output: Return 6, and the first 6 characters of the input array should be: ["a",
 Explanation: The groups are "aa", "bb", and "ccc". This compresses to "a2b2c3".
 */
 var compress = function (chars) {
+    let i = 0;
+    let j = 0;
+    while (i < chars.length) {
+        let count = 0;
+        let current = chars[i];
+        while (i < chars.length && chars[i] === current) {
+            i++;
+            count++;
+        }
+        chars[j++] = current;
+        if (count > 1) {
+            for (let c of count.toString()) {
+                chars[j++] = c;
+            }
+        }
+    }
+    return j;
 
 };
